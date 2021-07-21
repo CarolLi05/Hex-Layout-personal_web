@@ -3,6 +3,48 @@
 @import "variables";
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+@each $num, $value in $space {
+  .p-#{$num} {
+    padding: $value;
+  }
+
+  .pt-#{$num} {
+    padding-top: $value;
+  }
+
+  .pb-#{$num} {
+    padding-bottom: $value;
+  }
+
+  .pr-#{$num} {
+    padding-right: $value;
+  }
+
+  .pl-#{$num} {
+    padding-left: $value;
+  }
+
+  .m-#{$num} {
+    margin: $value;
+  }
+
+  .mt-#{$num} {
+    margin-top: $value;
+  }
+
+  .mb-#{$num} {
+    margin-bottom: $value;
+  }
+
+  .mr-#{$num} {
+    margin-right: $value;
+  }
+
+  .ml-#{$num} {
+    margin-left: $value;
+  }
+}
+
 *,*::before,*::after{
   box-sizing: border-box;
 }
@@ -28,11 +70,11 @@ img {
 
 h1,h2 {
   line-height: $font-line-height-sm;
-  font-weight: $font-weight-bold;
 }
 
 h1 {
   font-size: $h1-font-size;
+  font-weight: $font-weight-bold;
   margin-bottom: 32px;
   span{
     font-size: $font-size-regular;
@@ -45,6 +87,7 @@ h2 {
 
 h3{
   font-size: $h3-font-size;
+  font-weight: $font-weight-bold;
 }
 
 hr {
@@ -68,6 +111,14 @@ hr {
   background-color: $black;
 }
 
+.w-100{
+  width: 100%;
+}
+
+.m-0-auto{
+  margin: 0 auto;
+}
+
 .red-dot{
   &::before{
     content: " ";
@@ -77,12 +128,16 @@ hr {
     border-radius: 50%;
     background-color: $red;
     margin-right: 16px;
-    vertical-align: middle;
   }
 }
 
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
 .header {
-  background-image: url(https://cdn-sharing.adobecc.com/content/storage/id/urn:aaid:sc:US:27f2c1f7-6c48-42b5-a5fa-6db8eec461a5;revision=0?component_id=9d8b3f1a-5fdb-4d5e-91a5-0ba8a32d8fbc&api_key=CometServer1&access_token=1626833078_urn%3Aaaid%3Asc%3AUS%3A27f2c1f7-6c48-42b5-a5fa-6db8eec461a5%3Bpublic_3aeef22d9a98cc4582d66851717219da40d292b2);
+  background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week2/banner.png);
   background-size: cover;
   height: 958px;
   background-position: center center;
@@ -91,6 +146,10 @@ hr {
   justify-content: center;
   align-items: center;
   border-bottom: 1px solid $gray;
+}
+
+.header-description{
+  font-weight: $font-weight-bold;
 }
 
 .social-list {
@@ -111,9 +170,29 @@ hr {
   margin: 0 auto;
 }
 
-.container {
-  width: 1200px;
-  margin: 0 auto;
+.about-profile,
+.about-experience{
+  font-weight: $font-weight-bold;
+}
+
+.brand-imgs{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.other_work-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.other_work-item{
+  margin-bottom: 48px;
+}
+
+.other_work-img{
+  margin-bottom: 16px;
 }
 
 .footer {

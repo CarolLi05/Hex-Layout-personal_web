@@ -24,7 +24,21 @@ $font-weight-bold: 700;
 
 $space-default: 4px;
 $space:(
-    1: $space-default * 1,
-    2: $space-default * 2,
-    3: $space-default * 3
-)
+    4:    $space-default * 1,
+    8:    $space-default * 2,
+    12:   $space-default * 3,
+    16:   $space-default * 4,
+    20:   $space-default * 5,
+    24:   $space-default * 6,
+    28:   $space-default * 7,
+    32:   $space-default * 8,
+    36:   $space-default * 9,
+    40:   $space-default * 10,
+    48:   $space-default * 12,
+    56:   $space-default * 14,
+    64:   $space-default * 16,
+    68:   $space-default * 17,
+    96:   $space-default * 24,
+    144:  $space-default * 36,
+    160:  $space-default * 40
+);
